@@ -1,8 +1,8 @@
 {-# LANGUAGE LambdaCase #-}
 module Main where
 
-import Data.Char
-import Control.Applicative
+import Data.Char ( isDigit, isSpace )
+import Control.Applicative ( Alternative((<|>), empty, many) )
 
 data JsonValue
   = JsonNull
